@@ -86,7 +86,7 @@
         </div>
       </div>
       <header class="header">
-        <div class="logo">
+        <div class="logo headerLogo">
           <img class="logo__img" src="./assets/logo-red.png" alt="logo" />
         </div>
         <nav class="navigation">
@@ -113,9 +113,9 @@
           >Sign Up</a
         >
         <button id="burgerButton" class="burgerButton">
-          <div class="burgerButton__lineOne burgerLine"></div>
-          <div class="burgerButton__lineTwo burgerLine"></div>
-          <div class="burgerButton__lineThree burgerLine"></div>
+          <span class="burgerButton__lineOne burgerLine"></span>
+          <span class="burgerButton__lineTwo burgerLine"></span>
+          <span class="burgerButton__lineThree burgerLine"></span>
         </button>
       </header>
       <main class="main">
@@ -305,7 +305,7 @@
                 <circle cx="352.901" cy="170.238" r="2.80176" fill="#EF2A82" />
               </svg>
             </div>
-            <font class="registrationForm">
+            <form class="registrationForm">
               <h2 class="sectionTitle">Registration</h2>
               <label class="label" for="inputName"
                 >Name*
@@ -377,7 +377,7 @@
                 />
               </label>
               <button class="button redButton">Sign In</button>
-            </font>
+            </form>
           </div>
         </section>
         <section id="pricing" class="section pricing">
@@ -386,9 +386,8 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
             nisi aliquet volutpat pellentesque volutpat est.
           </p>
-          <div class="swiper pricing__slider">
+          <div class="swiper pricing__slider anim">
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <div class="swiper-slide pricing__slide">
                 <h3 class="pricing__title">Starter</h3>
                 <p class="article">up to 3 users</p>

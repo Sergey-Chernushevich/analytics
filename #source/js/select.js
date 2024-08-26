@@ -20,7 +20,8 @@ let select = function () {
     this.classList.add("select__item_selected");
     let text = this.innerText;
     select = this.closest(".select");
-    currentText = select.querySelector(".select__current");
+    console.log(select);
+    let currentText = select.querySelector(".select__current");
     currentText.value = text;
     select.classList.add("select_selected");
   }
