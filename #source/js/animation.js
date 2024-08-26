@@ -36,8 +36,6 @@ function handleScroll() {
     let position = elements[i].getBoundingClientRect().top;
     if (position - offset < 0) {
       elements[i].classList.add("show");
-    } else {
-      elements[i].classList.remove("show");
     }
   }
 }
