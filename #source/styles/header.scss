@@ -1,0 +1,41 @@
+.header{
+  background-color: $dark-blue;
+  width: 100%;
+  height: 70px;
+  padding: 0 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .navigation, .header__signInButton{
+    opacity: 0;
+  &.show{
+    opacity: 1;
+    transition: $second-transition-time;
+  }
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+}
+
+.logo{
+  height: 40px;
+opacity: 0;
+  
+  &.show{
+    opacity: 1;
+    transition: 1s;
+  }
+
+
+  .logo__img{
+    height: 100%;
+  }
+}
+

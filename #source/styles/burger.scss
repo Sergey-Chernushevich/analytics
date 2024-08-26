@@ -1,0 +1,115 @@
+.burgerButton{
+  width: 26px;
+  height: 24px;
+  position: relative;
+  transition: $transition-time;
+  z-index: 110;
+  opacity: 0;
+  &.show{
+    opacity: 1;
+    transition: $second-transition-time;
+  }
+
+  .burgerLine{
+    width: 100%;
+    height: 3px;
+    background-color: $text-t-secondary;
+    position: absolute;
+  }
+  
+  .burgerButton__lineOne {
+    left: 0;
+    top: 0;
+    transform: translate(0, 0) rotate(0);
+    transition: $transition-time;
+  }
+
+  .burgerButton__lineTwo{
+  transform: translateY(-50%);
+  left: 0;
+  top: 50%;
+  transition: $transition-time;
+  }
+
+  .burgerButton__lineThree {
+  left: 0;
+  top: 100%;
+  transform: translate(0, -100%) rotate(0);
+  transition: $transition-time;
+  }
+  
+  &.burgerButton_active .burgerButton__lineOne {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: $transition-time;
+    }
+
+  &.burgerButton_active .burgerButton__lineTwo {
+    opacity: 0;
+    transition: $transition-time;
+  }
+
+  &.burgerButton_active .burgerButton__lineThree {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: $transition-time;
+  }
+  @media (min-width: 993px) {
+ display: none;
+}
+}
+
+
+.burgerMenuWrapper {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100dvh;
+  left: 0;
+  transition: $transition-time;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 50;
+
+  &.burgerMenuWrapper_active{
+    opacity: 1;
+    visibility: visible;
+    transition: $transition-time;
+  }
+
+  .burgerMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 375px;
+    width: 100%;
+    height: 100dvh;
+    background-color: $dark-blue;
+    padding: 103px 20px 50px 20px;
+    transform: translateX(-100%);
+    transition: $transition-time;
+    // clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+    // background: linear-gradient(135deg, #ff7b00 75%, #f2f2f2 75%);
+
+    &.burgerMenu_active{
+      transform: translateX(0);
+      transition: $transition-time;
+    }
+  }
+
+  .navigationList{
+    flex-direction: column;
+
+    .navigationList__item{
+      font-weight: 700;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .burgerMenu__signInButton{
+    width: 100%;
+  }
+}

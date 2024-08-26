@@ -1,0 +1,246 @@
+@media (max-width: 1200px) {
+  .header{
+    padding: 0 5%;
+  }
+  .section{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section.products{
+    padding: 60px 0 100px 5%;
+  }
+
+  .registrationForm{
+    padding: 30px;
+  }
+
+  .footer{
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    .line{
+      width: 90%;
+      left: 5%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section.products{
+    .blockInfo {
+      .article{
+        margin: 15px 0 25px 0;
+      }
+    }
+  } 
+}
+
+@media (max-width: 992px) {
+  .header{
+    height: 63px;
+  }
+
+  .logo{
+    height: 30px;
+}
+
+.features{
+  padding-bottom: 50px;
+}
+
+.registration{
+  .registrationWrapper{
+    width: 80%;
+    .imageblock{
+      display: none;
+    }
+  }
+}
+
+.registrationForm{
+  width: 100%;
+  .sectionTitle{
+    text-align: center;
+  }
+
+  .button{
+    margin: 16px auto 0 auto;
+  }
+}
+
+
+
+.section.products{
+  flex-wrap: wrap;
+  padding: 40px 5% 100px 5%;
+
+  .diagramWrapper{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    order: 1;
+    padding: 10px 15px;
+    gap: 6px;
+    transform: translateX(0);
+    opacity: 0;
+    &.show{
+      opacity: 1;
+      transition: $second-transition-time;
+      transition-delay: 0.5s;
+    }
+
+    .diagramBlock{
+
+      &.diagramBlock_active{
+
+        transform: scale(1.5) translateX(0);
+      }  
+    }
+  }
+  .blockInfo{
+    order: 2;
+    width: 100%;
+    margin: 25px 0 0 0;
+  }
+}
+
+.background, .background-2, .background-3{
+  display: none;
+}
+
+  .pricing{
+    padding-left: 0;
+    padding-right: 0;
+    .article{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  .footer{
+    height: 112px;
+    .navigation{
+      display: none;
+    }
+  }   
+}
+
+@media (max-width: 767px) {
+  .features{
+    .article{
+      margin: 15px 0 40px 0;
+      text-align: left;
+    }
+  .featuresList{
+    flex-wrap: wrap;
+
+    .featuresList__item{
+      width: 100%;
+      flex-direction: row;
+      margin-bottom: 20px;
+
+      .itemImg{
+        margin-right: 30px;
+      }
+
+      .itemTitle{
+        text-align: left;
+        margin: 0 0 5px 0;
+      }
+
+      .article.featuereDiscription{
+        text-align: left;
+      }
+    }
+  } 
+}
+
+.registration{
+  .registrationWrapper{
+    width: 100%;
+
+  }
+
+  .subWrapper{
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+
+
+}
+
+@media (max-width: 576px) {
+  .mainTitle{
+    font-size: 30px;
+  }
+  .sectionTitle{
+    font-size: 30px;
+    text-align: left;
+    }
+  .article{
+    font-size: 16px;
+  }
+
+  .section.products{
+    padding: 40px 5% 150px 5%;
+    .blockInfo{
+      .button{
+      width: 100%;
+    }}
+
+  }
+  
+  .registration{
+    padding-bottom: 173px;
+
+    height: 550px;
+
+  }
+
+
+  .pricing{
+    .sectionTitle{
+      margin-left: 5%;
+    }
+    .article{
+      text-align: left;
+      margin: 10px 5% 30px 5%;
+    }
+
+    .pricing__slide{
+      border: 2px solid $btn-s-deafult;
+      border-radius: 30px;
+      padding: 40px 20px 50px 20px;
+  
+      .pricing__title{
+      font-size: 28px;
+      }
+  
+      .article{
+        margin: 10px 0 30px 0;
+        font-size: 16px;
+        
+      }
+    
+      .pricing_price{
+        font-size: 30px;
+        margin-top: 30px;
+      }
+  
+      .pricing__period{
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+      }
+  }
+}
