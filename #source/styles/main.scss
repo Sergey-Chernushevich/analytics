@@ -52,8 +52,6 @@ html {
   min-width: 320px;
   margin: 0 auto;
   position: relative;
-  // overflow: hidden;
-
 }
 
 .navigationList{
@@ -74,6 +72,7 @@ html {
 }
 
 .button{
+  min-height: 50px;
   font-size: 16px;
   height: 50px;
   width: 238px;
@@ -153,7 +152,6 @@ html {
     &.show{
       transform: translateX(0);
       transition: $second-transition-time;
-      transition-delay: 0.5s;
       opacity: 1;
     }
 
@@ -188,10 +186,6 @@ html {
   }
 }
 
-// .rotate {
-//   animation: rotate 100s linear infinite;
-// }
-
 .diagramWrapper{
   z-index: 40;
   background-color: $white;
@@ -211,7 +205,6 @@ html {
   &.show{
     transform: translateX(15%);
     transition: $second-transition-time;
-    transition-delay: 0.5s;
   }
   &:hover{
     transform: translateX(0);
@@ -364,7 +357,7 @@ width: 100%;
 
 .mapImage {
   ellipse{
-    animation: pulse 5s infinite;
+    animation: pulse 3s infinite;
   }
 }
 
@@ -373,7 +366,7 @@ width: 100%;
  opacity: 1;
   }
   50%{
-    opacity: 0.75;
+    opacity: 0.25;
   }
   to {
     opacity: 1;
@@ -386,6 +379,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   padding: 60px 80px;
+  max-height: 716px;
 
 
   .sectionTitle{
@@ -405,7 +399,9 @@ width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
-  
+  &.selectLabel{
+    margin: 0;
+  }
   .registrationForm__input{
     margin-top: 14px;
     width: 100%;
@@ -503,6 +499,7 @@ width: 100%;
   padding: 14px 20px;
   height: 50px;
   transition: $transition-time;
+  cursor: pointer;
   &:hover{
     background: $chart-lines;
     transition: $transition-time;
@@ -533,6 +530,7 @@ width: 100%;
     left: -30px;
   }
 
+
   .sectionTitle{
     color: $white;
   }
@@ -543,6 +541,11 @@ width: 100%;
 
 .pricing__slider{
   width: 100%;
+  opacity: 0;
+  &.show{
+    opacity: 1;
+    transition: $second-transition-time;
+  }
 
   .pricing__slide{
     background-color: $dark-blue;

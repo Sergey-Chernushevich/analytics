@@ -1,6 +1,6 @@
 const preloader = document.querySelector(".preloader");
 const header = document.querySelector(".header");
-const headerLogo = header.querySelector(".logo");
+const headerLogo = header.querySelector(".headerLogo");
 const headerNavigation = header.querySelector(".navigation");
 const headerSignInButton = header.querySelector(".header__signInButton");
 const headerBurgerButton = header.querySelector(".burgerButton");
@@ -16,7 +16,7 @@ function showElement(element) {
 
 window.onload = function () {
   preloader.style.display = "none";
-  document.body.style.overflow = "scroll";
+  document.body.style.overflow = "auto";
 
   showElement(headerLogo);
   showElement(headerNavigation);

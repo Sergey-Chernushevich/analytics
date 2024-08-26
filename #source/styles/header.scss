@@ -26,16 +26,18 @@
 
 .logo{
   height: 40px;
-opacity: 0;
-  
-  &.show{
-    opacity: 1;
-    transition: 1s;
-  }
-
+ 
 
   .logo__img{
     height: 100%;
+  }
+}
+
+.headerLogo{
+  opacity: 0;
+  &.show{
+    opacity: 1;
+    transition: $second-transition-time;
   }
 }
 
